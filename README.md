@@ -74,9 +74,13 @@ Setelah terpasang, jalankan perintah ini di STB untuk mengetes apakah aplikasi b
 
 Agar aplikasi otomatis berjalan di background saat STB booting atau menyala kembali:
 
-1. **Buat file service:**
+1. **Buka / Buat file service dengan `nano`:**
    ```bash
-   cat << 'EOF' > /etc/systemd/system/stb-monitor.service
+   sudo nano /etc/systemd/system/stb-monitor.service
+   ```
+
+2. **Tempelkan (Paste) konfigurasi berikut ke dalam editor:**
+   ```ini
    [Unit]
    Description=STB Hardware Monitor Service for ESP32
    After=network.target docker.service
@@ -91,17 +95,19 @@ Agar aplikasi otomatis berjalan di background saat STB booting atau menyala kemb
 
    [Install]
    WantedBy=multi-user.target
-   EOF
    ```
+   > **Cara Simpan di Nano:**
+   > - Tekan `Ctrl + O` lalu tekan `Enter` untuk menyimpan.
+   > - Tekan `Ctrl + X` untuk keluar dari nano.
 
-2. **Aktifkan & Jalankan Service:**
+3. **Aktifkan & Jalankan Service:**
    ```bash
    systemctl daemon-reload
    systemctl enable stb-monitor
    systemctl start stb-monitor
    ```
 
-3. **Cek Status & Pantau Log:**
+4. **Cek Status & Pantau Log:**
    ```bash
    # Cek apakah service aktif (Active: running)
    systemctl status stb-monitor
