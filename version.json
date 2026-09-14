@@ -1,0 +1,10 @@
+{
+  "version": "1.0.1",
+  "stb_version": "v1.0.1",
+  "stb_binaries": {
+    "arm64": "https://raw.githubusercontent.com/anton160695/stb-monitor-esp32/main/dist/stb_monitor_arm64",
+    "arm7": "https://raw.githubusercontent.com/anton160695/stb-monitor-esp32/main/dist/stb_monitor_arm7",
+    "amd64": "https://raw.githubusercontent.com/anton160695/stb-monitor-esp32/main/dist/stb_monitor_amd64"
+  },
+  "changelog": "Versi v1.0.1: Penambahan fitur -update manual dan refactoring switch command"
+}
