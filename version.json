@@ -1,12 +1,4 @@
 {
-  "boards": {
-    "firmware_esp32_devkit.bin": {
-      "version": "1.0.2",
-      "changelog": "Optimasi RAM dan perbaikan OLED layout untuk DevKit V1"
-    },
-    "firmware_esp32_c3.bin": {
-      "version": "1.0.0",
-      "changelog": "Rilis awal untuk ESP32-C3 Super Mini"
-    }
-  }
+  "version": "1.0.1",
+  "changelog": "Optimasi RAM dan Penambahan update ota"
 }
